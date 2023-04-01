@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  rel="stylesheet" href={{ url_for('static', filename='style.css') }}>
+</head>
+<body>
+    <div id="game">
+        <div id="game-container">
+            <div id="game-header">
+                <h1 id="counter">0</h1>
+            </div>
+            <canvas id="game-canvas" width="800" height="300">
+            </canvas>
+        </div>
+        <div id="tip">
+            <ul>
+                <li class="tip">
+                    <img src="{{ url_for('static', filename='img/obstacle1.png') }}">
+                    <h3>Поддельные токены</h3></li>
+                <li class="tip">
+                    <img src="{{ url_for('static', filename='img/obstacle2.png') }}">
+                    <h3>Спам токены</h3></li>
+                <li class="tip">
+                    <img src="{{ url_for('static', filename='img/obstacle3.png') }}">
+                    <h3>AML риски</h3></li>
+            </ul>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
